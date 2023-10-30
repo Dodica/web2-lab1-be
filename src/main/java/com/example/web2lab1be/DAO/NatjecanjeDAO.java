@@ -113,7 +113,7 @@ public class NatjecanjeDAO {
         parameters.addValue("format", natjecanje.getFormat());
         parameters.addValue("userid", natjecanje.getUserid());
         try {
-            jdbcTemplate.update("UPDATE natjecanje SET naziv = :naziv, brojnatjecatelja = :brojnatjecatelja, listanatjecatelja = :listanatjecatelja, listarezultata = :listarezultata, brojrunde = :brojrunde WHERE natjecanjeid = :natjecanjeid", parameters);
+            jdbcTemplate.update("UPDATE natjecanje SET naziv = :naziv, brojnatjecatelja = :brojnatjecatelja, listanatjecatelja = :listanatjecatelja, pairing = :pairing, listarezultata = :listarezultata, brojrunde = :brojrunde WHERE natjecanjeid = :natjecanjeid", parameters);
             return true;
         } catch (Exception e) {
             e.printStackTrace(); // Print the exception for debugging
